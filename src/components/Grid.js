@@ -1,8 +1,8 @@
-import React from "react";
-import Block from "./Block";
+import React, { useContext } from "react";
+import { Context } from "../contexts/Context";
 
 const Grid = () => {
-  const blocks = Array.from(Array(200), (_, i) => <Block key={i} />);
+  const { blocks } = useContext(Context);
 
   return <div className="Grid">{blocks}</div>;
 };
